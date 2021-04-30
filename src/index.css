@@ -1,0 +1,20 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .nav-stuff {
+      @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    }
+    .icon-img{
+      @apply flex ml-auto mr-auto m-8
+    }
+    .body-bold {
+     @apply font-bold m-4 text-gray-900
+    }
+    .img-border{
+    @apply w-full sm:w-36 h-36 flex justify-center border border-gray-200 p-4 rounded-2xl my-4
+    }
+  }
+
