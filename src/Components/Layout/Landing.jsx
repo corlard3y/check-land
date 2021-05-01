@@ -3,28 +3,61 @@ import Background from '../../Assets/marcel.jpg'
 import Icon from '../../Assets/icons8.png'
 import Umbrella from '../../Assets/umbrella.png'
 import Handbag from '../../Assets/handbag.png'
-
+import Iphone from '../../Assets/artificialart.jpg'
+import Engine from '../../Assets/engine.jpg'
+import EngineMan from '../../Assets/enginestuff.jpg'
+import Human from '../../Assets/human.jpeg'
+import Footer from './Footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import './Landing.css'
 
 function Landing() {
+
+  const openNav = () => {
+      if(
+        document.getElementById("myNav")
+      ){
+    document.getElementById("myNav").style.width = "100%";
+}
+  }
+  
+  const closeNav = () => {
+    if(
+        document.getElementById("myNav")
+      ){
+    document.getElementById("myNav").style.width = "0%";
+}}
+
   return (
       <Fragment>
     <div className="w-auto h-screen bg-local bg-cover max-w-screen"  style={{backgroundImage:`url(${Background})`}}>
 
+
         {/* Background & Navbar */}
+        <div className='flex flex-row justify-between'>
         <div className="invisible sm:visible sm:w-1/2 sm:ml-auto sm:mr-auto sm:flex sm:flex-row sm:justify-around sm:py-8 sm:font-bold sm:text-gray-800">
-                <div className=''>
+                <a href="#!">
                     Home
-                </div>
-                <div>
+                </a>
+                <a href="#!">
                     Blog
-                </div>
-                <div>
+                </a>
+                <a href="#!">
                     Contact
-                </div>
-                <div>
+                </a>
+                <a href="#!">
                     Support
-                </div>
+                </a>
         </div>
+
+
+        <div className='m-8 block sm:hidden' onClick={()=>openNav()}>  
+             <FontAwesomeIcon icon={faBars}/>
+        </div>
+        </div>
+
+
 
         <div className='text-center mt-48 text-4xl sm:mt-56 sm:text-6xl'>
             Connecting with <br></br>
@@ -41,6 +74,20 @@ function Landing() {
         </div>
 
     </div>
+
+
+    <div id="myNav" className="overlay">
+  <a href="#!" className="closebtn" onClick={()=>closeNav()}>&times;</a>
+  <div className="overlay-content">
+    <a href="#!">Home</a>
+    <a href="#!">Blog</a>
+    <a href="#!">Contact</a>
+    <a href="#!">Support</a>
+  </div>
+</div>
+
+   
+
 
 
 <div className='mt-40'>
@@ -149,8 +196,107 @@ function Landing() {
 
 <div className='mt-40'>
     <div className='w-auto text-center text-5xl font-bold'>
-        Recent Works
+        Blog
     </div>
+
+
+    <div className='mt-28 flex flex-col sm:flex-row justify-center p-4 sm:p-0'>
+
+    <div className='border border-gray-300 w-full sm:w-96 rounded-2xl my-8 sm:my-0 sm:mx-4'>
+                <div>
+                        <img src={Iphone} alt='' className='rounded-t-2xl' style={{width:'auto'}}/>
+                </div>
+                <div className='p-8'>
+                        <b className=''>How we adding fun and playful ambience on online course</b>
+
+
+                        <div className='flex flex-row mt-4'>
+                            <div>
+                                <img src={Human} alt='' style={{width:'50px',height:'50px',borderRadius:'160px'}}/>
+                            </div>
+                            <div className='flex flex-col mx-4'>
+                                <span>
+                                Dwinawan
+                                </span>
+                                <span>Mar 20,2020</span>
+                            </div>
+                        </div>
+                </div>
+    </div>
+
+
+
+    <div className='border border-gray-300 w-full sm:w-96 rounded-2xl my-8 sm:my-0 sm:mx-4'>
+                <div>
+                        <img src={Engine} alt='' className='rounded-t-2xl' style={{width:'auto'}}/>
+                </div>
+                <div className='p-8'>
+                        <b className=''>How we adding fun and playful ambience on online course</b>
+
+
+                        <div className='flex flex-row mt-4'>
+                            <div>
+                                <img src={Human} alt='' style={{width:'50px',height:'50px',borderRadius:'160px'}}/>
+                            </div>
+                            <div className='flex flex-col mx-4'>
+                                <span>
+                                Dwinawan
+                                </span>
+                                <span>Mar 20,2020</span>
+                            </div>
+                        </div>
+                </div>
+    </div>
+
+
+    <div className='border border-gray-300 w-full sm:w-96 rounded-2xl my-8 sm:my-0 sm:mx-4'>
+                <div>
+                        <img src={EngineMan} alt='' className='rounded-t-2xl' style={{width:'auto'}}/>
+                </div>
+                <div className='p-8'>
+                        <b className=''>How we adding fun and playful ambience on online course</b>
+
+
+                        <div className='flex flex-row mt-4'>
+                            <div>
+                                <img src={Human} alt='' style={{width:'50px',height:'50px',borderRadius:'160px'}}/>
+                            </div>
+                            <div className='flex flex-col mx-4'>
+                                <span>
+                                Dwinawan
+                                </span>
+                                <span>Mar 20,2020</span>
+                            </div>
+                        </div>
+                </div>
+    </div>
+
+
+    </div>
+
+
+    <div className='mt-4 sm:mt-8 text-indigo-500 flex justify-center'>
+        <small>See more <FontAwesomeIcon icon={faChevronRight}/> </small>
+    </div>
+
+    
+</div>
+
+
+<div className='mt-36 w-full flex justify-center'>
+    <div className='bg-blue-300 w-5/6 h-96 flex flex-col p-12 justify-around  rounded-md'>
+            <div className='text-lg sm:text-6xl text-white'>
+                Find the Support to <br></br> get your Start up growing. 
+            </div>
+            <div>
+                <button className='nav-stuff'>Read More</button>
+            </div>
+    </div>
+</div>
+
+
+<div>
+    <Footer />
 </div>
 </Fragment>
   );
