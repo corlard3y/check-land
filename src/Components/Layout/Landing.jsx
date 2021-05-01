@@ -40,10 +40,10 @@ function Landing() {
                 <a href="#!">
                     Home
                 </a>
-                <a href="#!">
+                <a href="#blog">
                     Blog
                 </a>
-                <a href="#!">
+                <a href="#contact">
                     Contact
                 </a>
                 <a href="#!">
@@ -59,7 +59,7 @@ function Landing() {
 
 
 
-        <div className='text-center mt-48 text-4xl sm:mt-56 sm:text-6xl'>
+        <div className='text-center mt-48 text-4xl 2xl:mt-96 sm:mt-56 sm:text-6xl'>
             Connecting with <br></br>
             <span className=''>Artificial Intelligence</span>
         </div>
@@ -79,10 +79,10 @@ function Landing() {
     <div id="myNav" className="overlay">
   <a href="#!" className="closebtn" onClick={()=>closeNav()}>&times;</a>
   <div className="overlay-content">
-    <a href="#!">Home</a>
-    <a href="#!">Blog</a>
-    <a href="#!">Contact</a>
-    <a href="#!">Support</a>
+    <a href="#!" onClick={()=>closeNav()}>Home</a>
+    <a href="#blog" onClick={()=>closeNav()}>Blog</a>
+    <a href="#contact" onClick={()=>closeNav()}>Contact</a>
+    <a href="#!" onClick={()=>closeNav()}>Support</a>
   </div>
 </div>
 
@@ -194,7 +194,7 @@ function Landing() {
     
 </div>
 
-<div className='mt-40'>
+<div className='mt-40' id='blog'>
     <div className='w-auto text-center text-5xl font-bold'>
         Blog
     </div>
@@ -295,7 +295,7 @@ function Landing() {
 </div>
 
 
-<div>
+<div id='contact'>
     <Footer />
 </div>
 </Fragment>

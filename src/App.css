@@ -1,8 +1,4 @@
-@font-face {
-    font-family: 'nexa';
-    src: url(./Assets/fonts/Nexa_V1_2012/Nexa\ Bold.otf);
-    font-style: normal;
-}
 * {
-font-weight: 'nexa';
+    font-family: 'New Athena Unicode', sans-serif;
+    font-weight: bolder;                                             
 }
