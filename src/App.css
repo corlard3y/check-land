@@ -1,4 +1,6 @@
-* {
-    font-family: 'New Athena Unicode', sans-serif;
-    font-weight: bolder;                                             
-}
+body {
+    margin: 0;
+    font-family: 'Overlock', cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
